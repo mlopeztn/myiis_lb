@@ -6,6 +6,8 @@ description 'Installs/Configures myiis_lb'
 long_description 'Installs/Configures myiis_lb'
 version '0.1.0'
 
+depends 'iis-lb'
+
 # The `issues_url` points to the location where issues for this cookbook are
 # tracked.  A `View Issues` link will be displayed on this cookbook's page when
 # uploaded to a Supermarket.
