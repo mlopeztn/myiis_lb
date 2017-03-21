@@ -1,16 +1,10 @@
 # contents of chef-repo/cookbooks/my-wrapper-cookbook/recipes/default.rb
 node.default['iis-lb']['members'] = [
   {
-    'address' => 'localhost',
+    'address' => 'hs11.southcentralus.cloudapp.azure.com',
     'weight' => 100,
-    'port' => 4000,
-    'ssl_port' => 4000
-  },
-  {
-    'address' => '127.0.0.1',
-    'weight' => 100,
-    'port' => 4001,
-    'ssl_port' => 4001
+    'port' => 80,
+    'ssl_port' => 443
   }]
 
 include_recipe 'iis-lb::default'
