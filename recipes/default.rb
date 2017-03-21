@@ -1,7 +1,16 @@
-#
-# Cookbook:: myiis_lb
-# Recipe:: default
-#
-# Copyright:: 2017, The Authors, All Rights Reserved.
+# contents of chef-repo/cookbooks/my-wrapper-cookbook/recipes/default.rb
+node.default['iis-lb']['members'] = [
+  {
+    'address' => 'localhost',
+    'weight' => 100,
+    'port' => 4000,
+    'ssl_port' => 4000
+  },
+  {
+    'address' => '127.0.0.1',
+    'weight' => 100,
+    'port' => 4001,
+    'ssl_port' => 4001
+  }]
 
 include_recipe 'iis-lb::default'
